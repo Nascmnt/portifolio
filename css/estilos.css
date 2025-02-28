@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(/css/contato.css);
+
+:root {
+    --background-gradient: linear-gradient(180deg, rgba(23,191,241,1) 0%, rgba(255,53,147,1) 50%);
+    --branco: #fdfbff;
+    --branco-transparente: rgba(253, 251, 255, 0.7);
+    --preto: #111013;
+    --preto-transparente: rgba(17, 16, 19, 0.7);
+    --rosa-pink: #FF3593;
+    --rosa-claro: #FFB5CF;
+    --azul-claro: #17BFF1;
+    --azul-escuro: #2011F8;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+body {
+    background-image: var(--background-gradient);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Roboto';
+}
+
+.navbar {
+    margin: 40px;
+}
+
+.navbar__list {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar__list--link {
+    text-decoration: none;
+    color: var(--branco);
+    background-color: var(--preto-transparente);
+    outline: 3px solid var(--rosa-pink);
+    padding: 15px;
+    margin: 30px;
+    font-family: 'Jura';
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.navbar__list--link:hover {
+    background-color: var(--preto);
+    color: var(--branco);
+    /* padding: 20px; */
+    outline: 8px solid var(--rosa-claro);
+}
+
+.info__container {
+    background-color: var(--preto);
+    display: block;
+    margin: auto;
+    width: 70%;
+    outline: 5px solid var(--azul-claro);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.info__title {
+    font-family: 'Jura';
+    font-size: 4rem;
+    letter-spacing: 5px;
+    font-weight: 600;
+    color: var(--rosa-pink);
+    text-align: left ;
+}
+
+.info__subtitle {
+    color: var(--azul-claro);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.info__text {
+    color: var(--branco);
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+.important__btn {
+    text-decoration: none;
+    color: var(--azul-escuro);
+    background-color: var(--azul-claro);
+    padding: 10px;
+    font-family: 'Jura';
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 600;
+    outline: 3px solid var(--azul-escuro);
+}
+
+.important__btn:hover {
+    background-color: var(--branco);
+}
+
+.indexbtns {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.contato__list {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 15px;
+}
+
+.contato__list--icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+.contato__list--item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: var(--azul-claro);
+    outline: 3px solid var(--azul-escuro);
+}
+
+.contato__list--item:hover {
+    background-color: var(--branco);
+}
+
+.contato__list--link {
+    font-family: 'Jura';
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: block;
+    padding: 20px;
+    color: var(--azul-escuro);
+}
+
+.contato__list--icon {
+    margin-left: 8px;
+    margin-right: -10px;
+}
+
+/* Menu responsivo */
+.menuresponsive__list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    display: none;
+    background-color: var(--preto-transparente);
+    width: 95%;
+    margin: auto;
+}
+
+.menuresponsive__list--icon {
+    width: 80px;
+    height: 80px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media only screen and (max-width: 760px) {
+    .navbar__list--link, .contato__list--link, .important__btn {
+        font-size: 1.1rem;
+    }
+
+    .navbar__list--link, .contato__list--link {
+        padding: 10px 12px;
+    }
+
+    .info__title {
+        font-size: 2.8rem;
+    }
+    .info__subtitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .navbar__list {
+        display: none;
+    }
+
+    .menuresponsive__list {
+        display: flex;
+    }
+    
+    .navbar__list--link {
+        font-size: 1rem;
+    }
+
+    .contato__list {
+        display: flex;
+    }
+
+    .info__title {
+        font-size: 2.3rem;
+    }
+
+    .info__subtitle {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 580px) {
+    
+    
+    .info__container {
+        padding: 30px 30px 0;
+    }
+    .info__title, .info__subtitle {
+        text-align: center;
+    }
+
+    .info__subtitle:last-child {
+        font-size: 1.1rem;
+    }
+
+    .indexbtns, .contato__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contato__list--item {
+        padding: 10px 20px;
+
+        margin-bottom: 20px;
+    }
+
+    .important__btn {
+        margin-bottom: 20px;
+    }
+
+    .meuemail {
+        font-size: 1.2rem;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 485px) {
+    .menuresponsive__list {
+        background-color: transparent;
+    }
+
+}
