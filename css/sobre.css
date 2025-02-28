@@ -39,4 +39,32 @@
         width: 50%;
         height: auto;
     }
+
+    .info__title, .info__subtitle, .info__text {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 930px) {
+    .container__geral {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .svg__container {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .svg__container img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .portrait {
+        width: 65%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
