@@ -246,8 +246,16 @@ body {
 }
 
 @media only screen and (max-width: 485px) {
-    .menuresponsive__list {
-        background-color: transparent;
+    .menuresponsive__list--icon {
+        height: 65px;
+        width: 65px;
     }
 
+}
+
+@media only screen and (max-width: 395px) {
+    .menuresponsive__list--icon {
+        height: 45px;
+        width: 45px;
+    }
 }
